@@ -1,0 +1,63 @@
+import nafdac from "../../../pages/images/nafdac.png";
+import { Link } from "react-router-dom";
+
+
+function Nav() {
+  return (
+    <div>
+      <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top mb-5">
+        <div className="container">
+          <Link className="navbar-brand d-flex" href="{{ route('dashboard') }}">
+            <div>
+              <img src={nafdac} alt="" width="50" height="50"></img>{" "}
+            </div>
+            <h3 className="text-success mt-2 px-2 h3">NAFDAC</h3>
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label=""
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav me-auto"></ul>
+            <ul className="navbar-nav ms-auto">
+              <li>
+                {" "}
+                <Link className="nav-link" to="/suspect">
+                  Check Suspect{" "}
+                </Link>
+              </li>
+
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                ></Link>
+
+                <div
+                  className="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="navbarDropdown"
+                ></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <br></br>
+      </div>
+    </div>
+  );
+}
+
+export default Nav;

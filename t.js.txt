@@ -1,0 +1,146 @@
+if (1 === 1) {
+    console.log(1)
+}
+
+if (2 === 2) {
+    console.log(2)
+
+}import axios from "axios";
+import { useEffect } from "react";
+import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Redirect, Route, useParams } from "react-router-dom";
+function Frontdesk() {
+    const unitId = localStorage.getItem('unitId')
+    const storePost = () => {
+        const data = {
+            firstname: "mysdasdasdfdafaf surty",
+            lastname: "my name tschbcdavdavahis name",
+            unitId: unitId,
+            middlename: "adfadgfadgfdafrae"
+        }
+        axios.post('api/suspect', data).then((res) => {
+            if (res.status === 200) {
+                console.log('stored')
+            }
+        }).catch((err) => console.log(err.message))
+    }
+
+    useEffect(() => {
+        // storePost()
+      
+    }, [])
+    function Todos() {
+
+    }
+    const [page, setPage] = React.useState(0)
+
+    const fetchProjects = (page = 0) =>
+        fetch(`api/suspect/${unitId}` + page)
+        .then((res) => {
+             res.json()
+        })
+        .then((data) => {
+            console.log(data)
+        })
+
+
+    const {
+        isLoading,
+        isError,
+        error,
+        data,
+        isFetching,
+        isPreviousData,
+    } = useQuery({
+        queryKey: ['projects', page],
+        queryFn: () => fetchProjects(page),
+        keepPreviousData: true
+    })
+
+    return (
+        <div>
+            {isLoading ? (
+                <div>Loading...</div>
+            ) : isError ? (
+                <div>Error: {error.message}</div>
+            ) : (
+                <div>
+                    {data.projects.map(project => (
+                        <p key={project.id}>{project.name}
+                            <h1>yes oooo</h1>
+                        </p>
+
+                    ))}
+                </div>
+            )}
+            <span>Current Page: {page + 1}</span>
+            <button
+                onClick={() => setPage(old => Math.max(old - 1, 0))}
+                disabled={page === 0}
+            >
+                Previous Page
+            </button>{' '}
+            <button
+                onClick={() => {
+                    if (!isPreviousData && data.hasMore) {
+                        setPage(old => old + 1)
+                    }
+                }}
+                // Disable the Next Page button until we know a next page is available
+                disabled={isPreviousData || !data?.hasMore}
+            >
+                Next Page
+            </button>
+            {isFetching ? <span> Loading...</span> : null}{' '}
+        </div>
+    )
+
+    // return (
+    //     <>
+    //         <h1>FRONT DESK OFFICER </h1>
+
+    //     </>
+    // )
+}
+
+export default Frontdesk;
+
+
+
+
+https://github.com/Aljullu/react-lazy-load-image-component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {showDate ? (
+          <button onClick={handleDate} className="btn btn-dark">
+            Show calender
+          </button>
+        ) : (
+          <div className="px-3">
+            <div className="text-end">
+              <code className="text-description mb-4">
+                Search by date
+              </code>
+              <br></br>
+              Selected date: {date.toDateString()}
+            </div>
+            <div className="calendar-container form-control">
+                {/* <button onClick={buttonCalender}> */}
+                  <Calendar onClickMonth={} onc onChange={setDate} value={date} />
+                {/* </button> */}
+            </div>   
+          </div>
+        )}

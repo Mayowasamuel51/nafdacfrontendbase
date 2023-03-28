@@ -1,0 +1,565 @@
+   <div className="row mt-3">
+                        <div className="col-md-12">
+                            <div className="mb-3">
+                                <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Personal Information</h3>
+                                <label for="" className="form-label fs-5">Name:</label>
+                                <input type="text" name="name" className="form-control shadow"
+                                    placeholder="surname                                                    firstname                                                              othername"/>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="mx-auto" style="display: flex; justify-content:space-between;">
+                                <div className="form-group">
+                                    <div className="form-check form-check-inline">
+                                      
+                                        <p className="text-dark fs-5 mb-2">Gender:</p>
+                                        <input className="form-check-input" type="checkbox" name="gender" id=""
+                                            value="male"/>
+                                        <label className="form-check-label" for="">Male</label>
+                                        <input className="form-check-input" type="checkbox" name="gender" id=""
+                                            value="female"/>
+
+                                        <label className="form-check-label" for="">Female</label>
+                                    <input className="form-check-input" type="checkbox" name="gender" id="" value="female"/> 
+                                    </div>
+                                    <div className="form-check form-check-inline">
+                                        <input className="form-check-input" type="checkbox" name="gender" id=""
+                                            value="female"/>
+                                        <label className="form-check-label" for="">Female</label>
+                                    </div>
+                                </div>
+
+                                <div className="mb-3 d-inline-block justify-center">
+                                    <p className="text-dark fs-5 mb-2">Date Of Birth:</p>
+                                    <input type="date" className="form-control shadow" name="date-of-birth"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <p className="text-dark fs-5 mb-2">Place Of Birth:</p>
+                                     <input type="text" className="form-control shadow" name="date_birth"
+                                        aria-describedby="helpId" placeholder="City/Town"/>
+                                    <select name="date_birth" id="" className="form-control state">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="mx-auto" style="display: flex; justify-content:space-between;">
+                                <div className="mb-3">
+
+                                    <p className="text-dark fs-5 mb-2">Mobile Phone:</p>
+                                    <input type="text" className="form-control shadow" name="mobile_phone"
+                                        aria-describedby="helpId" placeholder="#000000000"/>
+                                </div>
+
+                                <div className="mb-3">
+                                  
+                                    <p className="text-dark fs-5 mb-2">Office Phone:</p>
+                                    <input type="text" className="form-control shadow" name="office_phone"
+                                        aria-describedby="helpId" placeholder="#000000000"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <p className="text-dark fs-5 mb-2">Email:</p>
+                                    <input type="email" className="form-control shadow" name="email" id=""
+                                        aria-describedby="emailHelpId" placeholder="email address"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="mx-auto" style="display: flex; justify-content:space-evenly;">
+                                <div className="mb-3">
+                                    <p className="text-dark fs-5 mb-2">International Passport Number:</p>
+                                    <input type="text" className="form-control shadow" name="international_passport"
+                                        aria-describedby="emailHelpId" placeholder="########"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <p className="text-dark fs-5 mb-2">Spoken Languages:</p>
+                                  <input type="text" className="form-control shadow" name="langugaes"
+                                        aria-describedby="emailHelpId" placeholder=""/> 
+                                    <select name="langugaes" className="form-control spoken" id="" >
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="mx-auto" style="display: block;">
+                                <div className="mb-3">
+                                    <p className="text-dark fs-5 mb-2">Residential Address:</p>
+                                    <input type="text" className="form-control shadow" name="residental_address"
+                                        aria-describedby="emailHelpId" placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="mx-auto" style="display: block;">
+                                <div className="mb-3">
+
+                                    <p className="text-dark fs-5 mb-2">Office/Shop:</p>
+                                    <input type="text" className="form-control shadow" 
+                                        aria-describedby="emailHelpId" placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Educational Background</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-between;">
+                                <div className="mb-3">
+                                   
+                                    <label for="" className="form-label fs-5">Tertiary Institution</label>
+                                    <input type="text" name="tertiary_i" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Entry</label>
+                                    <input type="month" name="tertiary_y" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Graduation</label>
+                                    <input type="month" name="tertiary_yg" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                            </div>
+
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-between;">
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Secondary</label>
+                                    <input type="text" name="secondary" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Entry</label>
+                                    <input type="month" name="s_year_of_entry" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Graduation</label>
+                                    <input type="month" name="s_year_of_gradution" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                            </div>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-between;">
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Primary</label>
+                                    <input type="text" name="primary" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Entry</label>
+                                    
+                                    <input type="month" name="primary_year" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Year of Graduation</label>
+                                    <input type="month" name="p_year_g" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Employment Background</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around;">
+                                <div className="mb-3">
+                                  
+                                    <label for="" className="form-label fs-5">Last Place:</label>
+                                    <input type="text" name="last_place" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address of Employer:</label>
+                                    <input type="text" name="address_employer" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+                            </div>
+
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-evenly;">
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Penultimate Place</label>
+                                    <input type="text" name="Penultimate_Place" id=""
+                                        className="form-control shadow" placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address of Employer</label>
+                                    <input type="text" name="address_of_empolyer" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Place Origin</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-between;">
+                                <div className="mb-3">
+                                    @error('nationality')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Nationality</label>
+                                    <input type="text" name="nationality" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId" value="Nigeria"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">State</label>
+                                  
+                                        <select name="state" className="form-control pstate w-100" id=""  >
+
+                                        </select>
+                                </div>
+
+                                <div className="mb-3">
+                                    @error('ethnic_group')
+                                    <h6 style="" className="text-danger">{{  }}</h6>
+                                @enderror
+                                    <label for="" className="form-label fs-5">Ethnic Group</label>
+                        <input type="text" name="ethnic_group" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+
+                                    <select name="ethnic_group" id="" className="form-control ethnic_group">
+                                        <option value="">Choose</option>
+                                    </select>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Local Govt Area</label>
+                                    <input type="text" name="local_govt" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                      
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Town/Village</label>
+                                    <input type="text" name="town_village" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Spouse</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-between; gap: 2rem;">
+                                <div className="mb-3">
+                                    @error('spouse_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Name of Spouse</label>
+                                    <input type="text" name="spouse_name" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Maiden Name (if wife)</label>
+                                    <input type="text" name="spouse_maiden" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="spouse_date_brith" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="spouse_residential_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="spouse_phone" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Place of Work</label>
+                                    <input type="text" name="spouse_work" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Child 1</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                  
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="child1_name" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="child1_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="child1_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="child1_phone" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="child1_res_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Child 2</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                   
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="child2_name" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="child2_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="child2_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="child2_phone" id="" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="child2_res_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        <button className="btn btn-dark create">Create a new Child</button> 
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Father</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                    @error('father_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="father_name" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="father_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="father_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="father_number" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="father_res_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Mother</h3>
+
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                    @error('mother_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="mother_name" id="" className="form-control shadow"
+                                        placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="mother_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="mother_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="mother_number" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="mother_resaddress" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Sibling 1</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                    @error('Sibling1_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="Sibling1_name" id=""
+                                        className="form-control shadow" placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="Sibling1_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="Sibling1_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="'Sibling1_phone" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="Sibling1_res_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Sibling 2</h3>
+                            <div className="mx-auto mt-2" style="display: flex; justify-content:space-around; gap: 2rem;">
+                                <div className="mb-3">
+                                    @error('Sibling2_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label fs-5">Name</label>
+                                    <input type="text" name="Sibling2_name" id=""
+                                        className="form-control shadow" placeholder="" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Address</label>
+                                    <input type="text" name="Sibling2_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Date of Birth</label>
+                                    <input type="date" name="Sibling2_birth" className="form-control shadow"
+                                        aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Phone Number</label>
+                                    <input type="text" name="Sibling2_phone" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label fs-5">Residential Address</label>
+                                    <input type="text" name="Sibling2_res_address" id=""
+                                        className="form-control shadow" aria-describedby="helpId"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <h3 className="text-dark fs-4 mb-2" style="font-weight: 600;">Landlord/Caretaker</h3>
+                            <div className="mx-auto mt-2">
+                                <div className="mb-3">
+                                    @error('Landlord_name')
+                                        <h6 style="" className="text-danger">{{  }}</h6>
+                                    @enderror
+                                    <label for="" className="form-label">Name</label>
+                                    <input type="text" className="form-control shadow" name="Landlord_name"
+                                        id="" aria-describedby="helpId" placeholder=""/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label">Residential Address</label>
+                                    <input type="text" className="form-control shadow" name="Landlord_address"
+                                        id="" aria-describedby="helpId" placeholder=""/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label for="" className="form-label">Phone Number</label>
+                                    <input type="text" className="form-control shadow" name="Landlord_phone"
+                                       aria-describedby="helpId" placeholder=""/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-12 mt-4">
+                            <p className="text-dark fs-4">I hereby attest that the above information is true and correct to the
+                                best of my knowledge</p>
+                            <div className="mx-auto mt-3">
+                                <div className="mb-3">
+                                  
+                                    <label  className="form-label">Name</label>
+                                    <input type="text" className="form-control shadow" 
+                                        aria-describedby="helpId" placeholder=""/>
+                                </div>
+
+                                <div className="mb-3">
+                                    <label className="form-label">Signature/Date</label>
+                                    <input type="text" className="form-control shadow" name="hereby_signature"
+                                         aria-describedby="helpId" placeholder=""/>
+                                </div>
+                            </div>

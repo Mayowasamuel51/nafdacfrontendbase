@@ -1,0 +1,182 @@
+.sidebar {
+  float: left;
+  padding-inline: 2em;
+  padding-block: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* height: 100%; */
+  transition: ease 0.45s;
+  z-index: 999;
+}
+
+#heading{
+  padding: 1.2rem;
+  margin-top: 3rem;
+  margin-left: 0;
+}
+
+button:hover{
+  transition: ease 0.4s;
+  transform: translateY(-4px);
+}
+
+.sidebar-icon {
+  float: left;
+  background-color: #02c39a;
+  padding-inline: 2em;
+  padding-block: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: ease-in 0.5s;
+}
+
+.stretch-card {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-justify-content: stretch;
+  justify-content: stretch;
+  padding: 2rem;
+}
+
+.stretch-card > .card {
+  width: 100%;
+  min-width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
+  line-height: 1;
+}
+#icon {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  margin-left: 6rem;
+}
+
+#profile {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 4rem;
+}
+
+#list{
+  transition: ease 0.4s;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #02c399;
+  margin-bottom: 3rem;
+}
+
+
+
+#post {
+  margin-left: 0;
+}
+#post-ipo {
+  margin-left: 0;
+}
+
+#admin-content {
+  margin-left: 0;
+}
+
+#total {
+  margin-left: 0;
+  position: relative;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#totals{
+  position: relative;
+  top: 6rem;
+}
+
+#oc-officer{
+  margin-left: 0;
+}
+#notes{
+  margin-left: 0;
+}
+#ipo-officer{
+  margin-left: 0;
+}
+#more-info-oc{
+  margin-left: 0;
+}
+
+
+@media screen and (min-width: 800px) {
+  #post {
+    margin-left: 0rem;
+  }
+  #post-ipo {
+    margin-left: -200px;
+  }
+
+  #oc-officer{
+    margin-left: -200px;
+  }
+
+  #ipo-officer{
+    margin-left: -200px;
+  }
+  
+  #more-info-oc{
+    margin-left: -100px;
+  }
+
+  #notes{
+    margin-left: -100px;
+  }
+
+  #total {
+    position: relative;
+    left: 0rem;
+  }
+
+  #totals{
+    top: 6rem;
+    left: 0rem;
+  }
+  #heading{
+    padding: 1.2rem;
+    margin-left: 6.567rem;
+    text-align: center;
+    line-break: auto;
+
+  }
+  #logo{
+    position: relative;
+    left: 0;
+    margin-left: -25rem;
+  }
+}
