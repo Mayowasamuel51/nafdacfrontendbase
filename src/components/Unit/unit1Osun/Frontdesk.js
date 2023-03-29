@@ -76,23 +76,38 @@ function Frontdesk() {
     window.location.reload()
   }
   // changed the axious 
-  const fetchSearchData = (details, unitId) => {
-    axios(`/api/search/${details}/${unitId}`).then((res) => {
+  const fetchSearchData = async (details, unitId) => {
+    try {
+      const res = await axios(`/api/search/${details}/${unitId}`);
       if (res.data.status === 200) {
         console.log(res.data.data)
-        const api = res.data.data
+        const data = await res.data.data;
+        const api = data
         setSearchData(api)
         setSearchLoading(false)
         setBool(false)
       }
-      else if (res.data.status === 404) {
-        console.log('sorry for this name is not found')
-        setBool(true)
-        setSearchLoading(false)
-        setSearchData([])
-      }
+    } catch (err) {
+      setBool(true)
+      setSearchLoading(false)
+      setSearchData([])
+    }
+    // axios(`/api/search/${details}/${unitId}`).then((res) => {
+    // if (res.data.status === 200) {
+    //   console.log(res.data.data)
+    //   const api = res.data.data
+    //   setSearchData(api)
+    //   setSearchLoading(false)
+    //   setBool(false)
+    // }
+    // else if (res.data.status === 404) {
+    //   console.log('sorry for this name is not found')
+    //   setBool(true)
+    //   setSearchLoading(false)
+    //   setSearchData([])
+    // }
 
-    }).catch((err) => console.log(err.message))
+    // }).catch((err) => console.log(err.message))
   }
 
   // calendar logic 
@@ -196,10 +211,10 @@ function Frontdesk() {
       <Navbar details={details} detailsHanlder={detailsHanlder} FindDetails={clickFind} /> <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
       <div className="text-center " style={{
         float: 'right',
-        marginRight:'5em',
+        marginRight: '5em',
         boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', padding: '20px'
       }}>
-       
+
         <input className="form-control" type="date" onChange={dateHandler} value={dateinput} />
         <button className="btn btn-info fw-bolder mt-4 " onClick={buttonCalender}>check</button>
       </div>
@@ -209,7 +224,7 @@ function Frontdesk() {
         <div className="mt-4">
           {checkseacrch}
         </div>
-        <h1 className="ps-3 " style={{lineHeight:'2.8rem'}}>Frontdesk  Officer</h1> 
+        <h1 className="ps-3 " style={{ lineHeight: '2.8rem' }}>Frontdesk  Officer</h1>
         <h3 className="ps-3">Suspect infomation under  {unitId}</h3>
         <SuspectList suspect={suspectQuery.data} police={police} />
 
