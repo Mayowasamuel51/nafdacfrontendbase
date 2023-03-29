@@ -15,6 +15,7 @@ import SuspectList from "../../../List/SuspectList";
 import { Calendar } from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import PoliceList from "../../../List/PoliceList";
+import IpopoliceList from "../../../List/IpopoliceList";
 function IPO() {
     const [date, setDate] = useState(new Date());
     const [showDate, setShowDate] = useState(true);
@@ -48,30 +49,13 @@ function IPO() {
         <Navbar /> <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
             <div className="text-center align-baseline flex-fill flex-lg-row flex-column">
                 {/* Calender */}
-                {showDate ? (
-                    <button onClick={handleDate} className="btn btn-dark">
-                        Show calender
-                    </button>
-                ) : (
-                    <div className="px-3">
-                        <div className="text-end">
-                            <code className="text-description mb-4">
-                                Search by date
-                            </code>
-                            <br></br>
-                            Selected date: {date.toDateString()}
-                        </div>
-                        <div className="calendar-container form-control">
-                            <Calendar onChange={setDate} value={date} />
-                        </div>
-                    </div>
-                )}
+                
             </div>
             <div className="  ">
                 <h1 className="ps-3 " style={{lineHeight:'2.8rem'}}>IPO Officer</h1> 
                 <h5 className="ps-3">Suspect Infomation Under  {unitId}</h5>
                 <br />
-                <PoliceList suspect={suspectQuery.data} />
+                <IpopoliceList suspect={suspectQuery.data} />
             </div>
 
 

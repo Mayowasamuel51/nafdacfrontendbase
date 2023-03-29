@@ -19,6 +19,18 @@ function Rfoffiecer() {
         return axios(`/api/add-suspect-officerrf/${suspect_martic_number}`).then(res => res.data.suspect)
     }
     let navigate = useHistory();
+   
+    const [error, setError] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [name, setOfficerData] = useState([]);
+    const Call = () => {
+        axios(`/api/add-suspect-officerrf/${suspect_martic_number}`).then((res) => {
+            if (res.data.status === 200) {
+                const api = res.data.suspect;
+                setOfficerData(api);
+            }
+        });
+    }
     const [input, setInput] = useState({
         suspect_name: "",
         height_of_suspect: "",
@@ -45,21 +57,9 @@ function Rfoffiecer() {
     const handleInput = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
     };
-    const [error, setError] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [name, setOfficerData] = useState([]);
+   
 
-    const Call = useCallback(() => {
-        axios(`/api/add-suspect-officerrf/${suspect_martic_number}`).then((res) => {
-            if (res.status === 200) {
-                const api = res.data.suspect;
-                setOfficerData(api);
-            }
-        });
-    })
-    useEffect(() => {
-        Call();
-    }, [Call]);
+  
 
     let martic_numbe = "";
     let suspect_name = "";
@@ -97,7 +97,9 @@ function Rfoffiecer() {
             // oc_name: input.oc_name,
             // oc_signature_date: input.oc_signature_date,
             martic_number: martic_number,
-            unitId: unitId
+            unitId: unitId,
+            note:input.note
+
         };
         axios.post("/api/officers", data).then((response) => {
             if (response.data.status === 200) {
@@ -117,6 +119,9 @@ function Rfoffiecer() {
             }
         });
     };
+    useEffect(() => {
+        Call();
+    }, [martic_number]);
 
     return (
         <>

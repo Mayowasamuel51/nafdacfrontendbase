@@ -143,8 +143,17 @@ const Navbar = (props) => {
                     </Link>
                   </li> : null}
                 </li>
-                
-                
+
+
+                <li>
+                  {location.pathname === `/unit1Osun/ipo/add-suspect-officer/${linkname}` ? <li>
+                    <Link className="dropdown-item" to="/unit1Osun/ipo">
+                      <HiUserAdd className="fs-5 text-light" />
+                      <span className="fs-6 mx-1 fw-bold">Back</span>
+                    </Link>
+                  </li> : null}
+                </li>
+
 
 
               </ul>

@@ -5,6 +5,8 @@ import RF from '../components/Unit/unit1Osun/RF';
 import Rfoffiecer from '../components/OfficerComponents/Rfoffiecer';
 import IPOofficer from '../components/OfficerComponents/IPOofficer';
 import IPO from '../components/Unit/unit1Osun/IPO';
+import OC from '../components/Unit/unit1Osun/OC';
+import OCofficer from '../components/OfficerComponents/OCofficer';
 const route = [
     { path: '/unit1Osun', exact: true, name: 'Unit1Osun' },
     {
@@ -48,12 +50,26 @@ const route = [
         name: 'IPO',
         component: IPO
     },
-   
     {
         path: '/unit1Osun/ipo/add-suspect-officer/:martic_number',
         exact: true,
-        name: 'Officer',
+        name: 'OfficerIPO',
         component:IPOofficer
+    },
+
+
+    //this is oc below
+    {
+        path: '/unit1Osun/oc',
+        exact: true,
+        name: 'OC',
+        component: OC
+    },
+    {
+        path: '/unit1Osun/oc/add-suspect-officer/:martic_number',
+        exact: true,
+        name: 'OfficerOC',
+        component:OCofficer
     },
 
 
