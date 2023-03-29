@@ -194,11 +194,11 @@ function Frontdesk() {
     <>
       <Navbar details={details} detailsHanlder={detailsHanlder} FindDetails={clickFind} /> <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
       <div className="text-center " style={{
-        margin: 'auto', width: '50%', boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', padding: '20px'
+        float: 'right',
+        marginRight:'5em',
+        boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', padding: '20px'
       }}>
-        {/* Calender */}
-        {/*  i removed the data */}
-        {/* <h3></h3> */}
+       
         <input className="form-control" type="date" onChange={dateHandler} value={dateinput} />
         <button className="btn btn-info fw-bolder mt-4 " onClick={buttonCalender}>check</button>
       </div>
