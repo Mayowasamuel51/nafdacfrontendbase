@@ -88,6 +88,7 @@ function Frontdesk() {
       else if (res.data.status === 404) {
         console.log('sorry for this name is not found')
         setBool(true)
+        setSearchLoading(false)
         setSearchData([])
       }
 
