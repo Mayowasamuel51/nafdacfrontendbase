@@ -15,7 +15,7 @@ import Unit2OsunRoutes from "./routes/authroutes/Unit2OsunRoutes";
 import Page403 from './components/errors/Page403'
 import Page404 from './components/errors/Page404'
 
-axios.defaults.baseURL = "http://127.0.0.1:8000/";
+axios.defaults.baseURL = "https://codarnetwork.online/";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Accept"] = "application/json";
 axios.defaults.withCredentials = true;
