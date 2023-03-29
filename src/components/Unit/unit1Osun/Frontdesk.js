@@ -87,10 +87,17 @@ function Frontdesk() {
         setSearchLoading(false)
         setBool(false)
       }
+
+      else if (res.data.status === 404) {
+        // console.log('sorry for this name is not found')
+        setBool(true)
+        setSearchLoading(false)
+        setSearchData([])
+      }
     } catch (err) {
-      setBool(true)
-      setSearchLoading(false)
-      setSearchData([])
+      // setBool(true)
+      // setSearchLoading(false)
+      // setSearchData([])
     }
     // axios(`/api/search/${details}/${unitId}`).then((res) => {
     // if (res.data.status === 200) {
