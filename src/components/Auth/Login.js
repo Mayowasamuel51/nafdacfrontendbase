@@ -236,7 +236,7 @@ const Login = () => {
                                                 Token Pass
                                             </label>
                                             <input
-                                                type="text"
+                                                type="password"
                                                 className="form-control shadow"
                                                 name="tokenpass"
                                                 onChange={handelInput}
