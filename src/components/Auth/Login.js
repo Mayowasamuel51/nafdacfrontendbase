@@ -12,6 +12,8 @@ const Login = () => {
     const [role, setRole] = useState("");
     const [state, setState] = useState('')
     const [unit, setUnit] = useState("")
+
+    const [errorCheck , setErrorCheck] = useState(false)
     const [loginInput, setLoginInput] = useState({
         tokenpass: "",
         password: "",
@@ -44,6 +46,14 @@ const Login = () => {
             password: loginInput.password
         };
         axios.post('api/login', data).then((res) => {
+            if(state === "" && role === '' && unit === '' && loginInput.tokenpass === '' && loginInput.password === '' ) return setErrorCheck(true)
+            if (res.data.status === 401) {
+                history.push(`/`)
+                notyf.error('invaild credentials');
+                // alert('invaild credentials '
+
+            }
+
             if (unit === "unit1Osun") {
                 if (res.data.role === 'frontdesk') {
                     localStorage.setItem("auth_token", res.data.token);
@@ -97,8 +107,6 @@ const Login = () => {
                 }
 
             }
-
-
 
             if (unit === "unit2Osun") {
                 if (res.data.role === 'frontdesk') {
@@ -182,6 +190,7 @@ const Login = () => {
 
                                     {/* State */}
                                     <div className="row is-widescreen mt-3  mb-4">
+                                    
                                         <div className="col-md-6">
                                             <label className="fs-6 col-form-label text-md-end">
                                                 State
@@ -270,6 +279,7 @@ const Login = () => {
 
                                     <div className="row mb-0">
                                         <div className="col-md-8">
+                                        {errorCheck ?  <h4 className="text-danger p-3">please complete all field </h4> : ' '}
                                             <button
                                                 type="submit"
                                                 className="btn btn-success py-2 px-5"

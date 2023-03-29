@@ -48,7 +48,7 @@ function  IpopoliceList({ suspect }) {
                                                             delayTime={1000}
 
                                                             // height={image.height}
-                                                            src={`https://codarnetwork.online/storage/uploads/${item.affix_left}`}
+                                                            src={`http://127.0.0.1:8000/storage/uploads/${item.affix_left}`}
                                                             width="160px"
                                                             className="p-1"
                                                         // width={item.affix_left.width}

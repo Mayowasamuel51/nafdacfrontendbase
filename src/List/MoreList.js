@@ -26,7 +26,7 @@ function MoreList({ moreinfo }) {
                             <div className='row'>
                                 {/* <img src="download.png" alt=""> */}
                                 <img style={{ width: '40%', borderRadius: '12px' }}
-                                    src={`https://codarnetwork.online/storage/uploads/${item.affix_left}`} className="img-thumbnail" alt="..." />
+                                    src={`http://127.0.0.1:8000/storage/uploads/${item.affix_left}`} className="img-thumbnail" alt="..." />
                                 <br></br>
                             </div>
                             <div className="row">

@@ -42,7 +42,7 @@ function SuspectList({ suspect, police }) {
                                                         opacity='2.4'
 
                                                         // height={image.height}
-                                                        src={`https://codarnetwork.online/storage/uploads/${item.affix_left}`}
+                                                        src={`https://codarnetwork.online/uploads/${item.affix_left}`}
                                                         width="130px"
                                                         className="p-1"
                                                     // width={item.affix_left.width}

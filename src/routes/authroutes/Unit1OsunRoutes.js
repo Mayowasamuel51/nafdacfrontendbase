@@ -6,8 +6,12 @@ import { useEffect } from 'react';
 import { Circles } from 'react-loader-spinner';
 import { Route, Redirect, useHistory } from 'react-router-dom'
 
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; // for React, Vue and Svelte
+
 import swal from 'sweetalert';
 function Unit1OsunRoutes({ ...rest }) {
+  const notyf = new Notyf();
   const history = useHistory();
   const [errorNetwork, setErrorNetwork] = useState(false)
   const [Authenticated, setAuthenticated] = useState(false)
@@ -31,8 +35,9 @@ function Unit1OsunRoutes({ ...rest }) {
   axios.interceptors.response.use(
     undefined, function axiosRetryInterceptor(err) {
       if (err.response.status === 401) {
-        swal("Unauthorized", err.response.data.message, "warning")
+        swal("Unauthorized", err.response.data.message_back, "warning")
         history.push('/')
+        notyf.error('worng');
       }
       return Promise.reject(err);
     }
@@ -42,12 +47,14 @@ function Unit1OsunRoutes({ ...rest }) {
       return response
     }, function (err) {
       if (err.response.status === 403) {   // access denied
-        swal('Forbedden', err.response.data.message, 'warning')
+        swal('Forbedden', err.response.data.message_back, 'warning')
         history.push('/403')
+        notyf.error('worng');
       }
       else if (err.response.status === 404) {   // page not found
         swal('404 Error', "URL PAGE NOT FOUND", 'warning')
         history.push('/404')
+        notyf.error('worng');
       }
       return Promise.reject(err)
     }

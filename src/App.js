@@ -12,9 +12,10 @@ import Login from "./components/Auth/Login";
 import Unit2OsunRoutes from "./routes/authroutes/Unit2OsunRoutes";
 
 
+import Page403 from './components/errors/Page403'
+import Page404 from './components/errors/Page404'
 
-
-axios.defaults.baseURL = "https://codarnetwork.online/";
+axios.defaults.baseURL = "http://127.0.0.1:8000/";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 axios.defaults.headers.post["Accept"] = "application/json";
 axios.defaults.withCredentials = true;
@@ -29,6 +30,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/403" component={Page403} />
+          <Route path="/404" component={Page404} />
+
+
           <Route exact path="/" component={Home} />
           <Route path="/login">
             {localStorage.getItem("auth_token") ? (
@@ -37,10 +42,10 @@ function App() {
               <Login />
             )}
           </Route>
-       
+
           <Unit1OsunRoutes path="/unit1Osun" name="Unit1Osun" />
-          <Unit2OsunRoutes path="/unit2Osun" name="Unit2Osun"/>
-        
+          <Unit2OsunRoutes path="/unit2Osun" name="Unit2Osun" />
+
         </Switch>
       </Router>
 
@@ -51,4 +56,4 @@ function App() {
 export default App;
 
 
-// just put a name there
+// just put a name
