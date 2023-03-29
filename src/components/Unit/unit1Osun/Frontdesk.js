@@ -77,7 +77,7 @@ function Frontdesk() {
   }
   // changed the axious 
   const fetchSearchData = (details, unitId) => {
-    axios(`api/search/${details}/${unitId}`).then((res) => {
+    axios(`/api/search/${details}/${unitId}`).then((res) => {
       if (res.data.status === 200) {
         console.log(res.data.data)
         const api = res.data.data
@@ -96,7 +96,7 @@ function Frontdesk() {
 
   // calendar logic 
   function calenderLogic(getyear, unitId) {
-    axios(`api/fullyear/${getyear}/${unitId}`).then((res) => {
+    axios(`/api/fullyear/${getyear}/${unitId}`).then((res) => {
       if (res.data.status === 200) {
         console.log(res.data.data)
         const api = res.data.data
