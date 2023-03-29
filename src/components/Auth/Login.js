@@ -54,7 +54,7 @@ const Login = () => {
                     // swal("Welcome!", "", "success");
                     notyf.success('welcome');
                 }
-               else  if (res.data.role === 'rf') {
+                else if (res.data.role === 'rf') {
                     console.log(res.data)
                     localStorage.setItem("auth_token", res.data.token);
                     localStorage.setItem("unitId", res.data.unitId);
@@ -62,6 +62,38 @@ const Login = () => {
                     console.log('welcome to rf')
                     history.push(`/unit1Osun/rf`)
                     notyf.success('welcome as rf');
+                }
+
+                else if (res.data.role === 'ipo') {
+                    console.log(res.data)
+                    localStorage.setItem("auth_token", res.data.token);
+                    localStorage.setItem("unitId", res.data.unitId);
+                    localStorage.setItem("role", role);
+                    console.log('welcome to IPO')
+                    history.push(`/unit1Osun/ipo`)
+                    notyf.success('welcome asI IPO ');
+                }
+
+
+
+                else if (res.data.role === 'oc') {
+                    console.log(res.data)
+                    localStorage.setItem("auth_token", res.data.token);
+                    localStorage.setItem("unitId", res.data.unitId);
+                    localStorage.setItem("role", role);
+                    console.log('welcome to OC')
+                    history.push(`/unit1Osun/oc`)
+                    notyf.success('welcome as OC');
+                }
+
+                else if (res.data.role === 'admin') {
+                    console.log(res.data)
+                    localStorage.setItem("auth_token", res.data.token);
+                    localStorage.setItem("unitId", res.data.unitId);
+                    localStorage.setItem("role", role);
+                    console.log('welcome to admin')
+                    history.push(`/unit1Osun/admin`)
+                    notyf.success('welcome as  admin');
                 }
 
             }
