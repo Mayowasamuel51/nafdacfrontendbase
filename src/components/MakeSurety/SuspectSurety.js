@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 
 import { useEffect, useState, useRef } from 'react';
 import Nav_Link from './Layouts/Nav_Link';
-import { HiArrowSmDown, HiArrowNarrowUp } from "react-icons/hi";
+// import { HiArrowSmDown, HiArrowNarrowUp } from "react-icons/hi";
 import { Button } from '@mui/material';
 // import Heading from '../Layouts/Heading'
 import Nav from './Layouts/Nav'
@@ -405,7 +405,7 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
                 </div>
                 <br />
                 <div className="text-center fs-5 ">
-                    < HiArrowSmDown className="fs-1 text-center text-primary" /> <br></br>
+                    {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> <br></br> */}
                     <button className="btn btn-dark"> <Link
                         // to={`suspect-many-surety/${martic_number}`}
                         to={`/fd/edit-suspect-surety/${suspect_id}/suspect-many-surety/${martic_number}`}
@@ -416,7 +416,7 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
                 <div className="m-5" style={{ boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 100px 0px' }} data-aos="fade-right" data-aos-delay="90" data-aos-easing="ease-in-out"   >
                     <div className="col-md-12 p-4">
                         <div className="">
-                            < HiArrowSmDown className="fs-1 text-center text-primary" />
+                            {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> */}
                             <div className="d-flex justify-content-center" style={{ backgroundColor: '', padding: '14px' }}>
 
 
@@ -576,9 +576,9 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
                     </div>
                 </div>
                 <div className="" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    < HiArrowSmDown className="fs-1 text-center text-primary" />
+                    {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> */}
 
-                    <HiArrowNarrowUp className="fs-1 text-center text-success" />
+                    {/* <HiArrowNarrowUp className="fs-1 text-center text-success" /> */}
                 </div>
                 <hr></hr>
                 {/* Educational  */}
@@ -664,9 +664,9 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
 
                 </div>
                 <div className="" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    < HiArrowSmDown className="fs-1 text-center text-primary" />
+                    {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> */}
 
-                    <HiArrowNarrowUp className="fs-1 text-center text-success" />
+                    {/* <HiArrowNarrowUp className="fs-1 text-center text-success" /> */}
                 </div>
                 <hr></hr>
 
@@ -709,9 +709,9 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
 
                 </div>
                 <div className="" style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    < HiArrowSmDown className="fs-1 text-center text-primary" />
+                    {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> */}
 
-                    <HiArrowNarrowUp className="fs-1 text-center text-success" />
+                    {/* <HiArrowNarrowUp className="fs-1 text-center text-success" /> */}
                 </div>
                 <div className="m-5 p-4" style={{ boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 100px 0px' }} data-aos="fade-up" data-aos-delay="2" data-aos-easing="ease-in">
                     <h1 className="text-center fs-5">Place of Orgin</h1>
@@ -833,7 +833,7 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
                     </div>
                 </div>
                 <div className="" >
-                    < HiArrowSmDown className="fs-1 text-center text-primary" />
+                    {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> */}
                 </div>
 
                 <div className=" mt-1 p-5">
