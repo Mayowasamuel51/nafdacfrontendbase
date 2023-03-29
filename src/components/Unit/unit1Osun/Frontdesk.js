@@ -208,6 +208,7 @@ function Frontdesk() {
         <div className="mt-4">
           {checkseacrch}
         </div>
+        <h1 className="ps-3 " style={{lineHeight:'2.8rem'}}>Frontdesk  Officer</h1> 
         <h3 className="ps-3">Suspect infomation under  {unitId}</h3>
         <SuspectList suspect={suspectQuery.data} police={police} />
 
