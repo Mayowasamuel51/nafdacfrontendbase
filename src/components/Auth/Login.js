@@ -46,7 +46,7 @@ const Login = () => {
             password: loginInput.password
         };
         axios.post('api/login', data).then((res) => {
-            if(state === "" && role === '' && unit === '' && loginInput.tokenpass === '' && loginInput.password === '' ) return setErrorCheck(true)
+            if(state === "" || role === '' || unit === '' || loginInput.tokenpass === '' || loginInput.password === '' ) return setErrorCheck(true)
             if (res.data.status === 401) {
                 history.push(`/`)
                 notyf.error('invaild credentials');
