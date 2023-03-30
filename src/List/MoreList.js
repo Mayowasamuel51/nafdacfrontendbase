@@ -3,10 +3,11 @@ import moment from "moment";
 import '../pages/layoutAuth/style.css'
 import { Link } from "react-router-dom";
 
-function MoreList({ moreinfo }) {
+function MoreList({ moreinfo, suspectmanysurety }) {
     return (
         <>
-            <div className='container is-widescreen row'>
+            <div className='container is-widescreen row' style={{ marginLeft: '5em' }}>
+                <h3 className="text-center p-2">MORE INFO  PAGE</h3>
                 {moreinfo.map((item, index) => {
                     return (
                         <div style={{ marginTop: "5em" }} key={item.id}>
@@ -148,76 +149,77 @@ function MoreList({ moreinfo }) {
 
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div className="col-md-6 mt-4">
-                                        <div className="card shadow p-4">
-                                            <div className="card-body">
-                                                <h4 className="text-center">Employment Infomation</h4> <br />
+                                <div className="col-md-6 mt-4">
+                                    <div className="card shadow p-4">
+                                        <div className="card-body">
+                                            <h4 className="text-center">Employment Infomation</h4> <br />
 
-                                                <li>
-                                                    Last Place{" "}
-                                                    <span className="ps-2 fw-bold">{item.last_place}</span>{" "}
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Address Employer{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.address_employer}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Penultimate_Place{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.Penultimate_Place}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Address_of_penultimate{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.address_of_penultimate}
-                                                    </span>{" "}
-                                                </li>
+                                            <li>
+                                                Last Place{" "}
+                                                <span className="ps-2 fw-bold">{item.last_place}</span>{" "}
+                                            </li>
+                                            <li>
+                                                {" "}
+                                                Address Employer{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.address_employer}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Penultimate_Place{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.Penultimate_Place}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Address_of_penultimate{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.address_of_penultimate}
+                                                </span>{" "}
+                                            </li>
 
 
-                                                <li>
-                                                    Spouse name{" "}
-                                                    <span className="ps-2 fw-bold">{item.spouse_name}</span>{" "}
-                                                </li>
-                                                <li>
-                                                    {" "}
-                                                    Spouse_maiden{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.spouse_maiden}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Spouse_date_brith
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.spouse_date_brith}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Spouse_residential_address{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.spouse_residential_address}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Spouse_phone{" "}
-                                                    <span className="ps-2 fw-bold">
-                                                        {item.spouse_phone}
-                                                    </span>{" "}
-                                                </li>
-                                                <li>
-                                                    Spouse_work{" "}
-                                                    <span className="ps-2 fw-bold">{item.spouse_work}</span>{" "}
-                                                </li>
+                                            <li>
+                                                Spouse name{" "}
+                                                <span className="ps-2 fw-bold">{item.spouse_name}</span>{" "}
+                                            </li>
+                                            <li>
+                                                {" "}
+                                                Spouse_maiden{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.spouse_maiden}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Spouse_date_brith
+                                                <span className="ps-2 fw-bold">
+                                                    {item.spouse_date_brith}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Spouse_residential_address{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.spouse_residential_address}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Spouse_phone{" "}
+                                                <span className="ps-2 fw-bold">
+                                                    {item.spouse_phone}
+                                                </span>{" "}
+                                            </li>
+                                            <li>
+                                                Spouse_work{" "}
+                                                <span className="ps-2 fw-bold">{item.spouse_work}</span>{" "}
+                                            </li>
 
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <hr></hr>
+
+
 
                                 <div className="row">
                                     <div className="col-md-6">
@@ -364,39 +366,39 @@ function MoreList({ moreinfo }) {
                                                         <th scope="col">Gender </th>
                                                     </tr>
                                                 </thead>
-                                                {/* <tbody>
-                                        {suspectmanysurety.length > 0 ? (
-                                            suspectmanysurety.map((item, index) => {
-                                                return (
-                                                    <tr key={index}>
-                                                        <td>{item.firstname}</td>
-                                                        <td>{item.office_phone}</td>
-                                                        <td>
-                                                            <img
-                                                                src={`http://127.0.0.1:8000/uploads/images/${item.affix_left}`}
-                                                                width="120px"
-                                                            />
-                                                        </td>
-                                                        <td>{item.mobile_phone}</td>
-                                                        <td>{item.residental_address}</td>
-                                                        <td>{item.office_shop}</td>
-                                                        <td>{item.international_passport}</td>
-                                                        <td>{item.gender}</td>
-                                                    </tr>
-                                                );
-                                            })
-                                        ) : (
-                                            <tr>
-                                                <td>
-                                                    <div className="text-center">
-                                                        <h3 className="text-danger text-uppercase fs-5">
-                                                            There are no Sureties for {suspect_name}
-                                                        </h3>{" "}
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        )}
-                                    </tbody> */}
+                                                <tbody>
+                                                    {suspectmanysurety.length > 0 ? (
+                                                        suspectmanysurety.map((item, index) => {
+                                                            return (
+                                                                <tr key={index}>
+                                                                    <td>{item.firstname}</td>
+                                                                    <td>{item.office_phone}</td>
+                                                                    <td>
+                                                                        <img
+                                                                            src={`http://127.0.0.1:8000/uploads/images/${item.affix_left}`}
+                                                                            width="120px"
+                                                                        />
+                                                                    </td>
+                                                                    <td>{item.mobile_phone}</td>
+                                                                    <td>{item.residental_address}</td>
+                                                                    <td>{item.office_shop}</td>
+                                                                    <td>{item.international_passport}</td>
+                                                                    <td>{item.gender}</td>
+                                                                </tr>
+                                                            );
+                                                        })
+                                                    ) : (
+                                                        <tr>
+                                                            <td>
+                                                                <div className="text-center">
+                                                                    <h3 className="text-danger text-uppercase fs-5">
+                                                                        There are no Sureties
+                                                                    </h3>{" "}
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    )}
+                                                </tbody>
                                             </table>
                                             <Link
                                                 className="btn btn-success "

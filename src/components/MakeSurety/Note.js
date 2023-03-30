@@ -2,9 +2,12 @@
 import { Link, useParams, useHistory } from 'react-router-dom'
 import axios from 'axios'
 import { useState, useEffect, useRef } from 'react';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; 
 function Note(props) {
+    const notyf = new Notyf();
     const history = useHistory()
     const mainRef = useRef('');;;;;;;;;
     const { id } = useParams()
@@ -50,12 +53,14 @@ function Note(props) {
         const data =value
         axios.put(`/api/noteformfd/${suspect_id}`, data).then((res) => {
             if (res.data.status === 200) {
-                swal('Success', "Upadate SuccessFull", 'success')
+                // swal('Success', "Upadate SuccessFull", 'success')
                 window.location.reload(false);
+                notyf.success('NOTE  ADDED ');
             } else if(res.data.status === 404) {
-                swal('danger', "not allowed ", 'danger')
+                // swal('danger', "not allowed ", 'danger')
+                  notyf.success('not allowed ');
                 // window.location.reload(false);
-                history.push('/')
+                // history.push('/')
 
             }
         }).catch((err) => {
@@ -72,8 +77,9 @@ function Note(props) {
                 setNote(api) 
                 setValue(apinote)
             } else if(res.data.status === 404) {
-                swal('Danger', res.data.data, 'danger')
-               history.push('/fd/dashboard')
+                // swal('Danger', res.data.data, 'danger')
+                notyf.success('Danger ');
+            //    history.push('/fd/dashboard')
             }
         }
         ).catch(err => { console.log(err) })

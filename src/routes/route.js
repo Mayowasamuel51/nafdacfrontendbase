@@ -7,6 +7,9 @@ import IPOofficer from '../components/OfficerComponents/IPOofficer';
 import IPO from '../components/Unit/unit1Osun/IPO';
 import OC from '../components/Unit/unit1Osun/OC';
 import OCofficer from '../components/OfficerComponents/OCofficer';
+import Note from '../components/MakeSurety/Note';
+import SuspectEdit from '../components/Unit/unit1Osun/SuspectEdit';
+import MoreInfo from '../components/MoreInfo/MoreInfo';
 const route = [
     { path: '/unit1Osun', exact: true, name: 'Unit1Osun' },
     {
@@ -26,6 +29,10 @@ const route = [
         exact: true, name: 'SuspectSurety',
         component: SuspectSurety
     },
+
+    //child
+    { path: '/unit1Osun/edit-suspect/:martic_number', exact: true, name: 'SuspectEdit', component: SuspectEdit },
+    {path:'/unit1Osun/note/:id/', exact:true, name:'Note', component:Note},
 
 
 
@@ -72,6 +79,13 @@ const route = [
         component:OCofficer
     },
 
+
+    {
+        path: '/unit1Osun/moreinfo/:martic_number',
+        exact: true,
+        name: 'MoreInfo',
+        component: MoreInfo
+    }
 
 
 

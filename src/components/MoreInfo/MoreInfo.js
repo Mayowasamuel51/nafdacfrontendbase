@@ -9,15 +9,25 @@ import MoreList from "../../List/MoreList";
 export  function getmoreinfo(){
     const martic_number = localStorage.getItem('martic_number')
     return axios
-    .get(`api/moreinfo/${martic_number}`).then(res=>res.data.suspect)
+    .get(`/api/moreinfo/${martic_number}`).then(res=>res.data.suspect)
 }
 
 
 
+export  function getmoreinfo2(){
+    const unitId = localStorage.getItem('unitId')
+    return axios
+    .get(`/api/moreinfo/surety/${unitId}`).then(res=>res.data.data)
+}
 function MoreInfo() {
     const suspectQuery = useQuery({
         queryKey: ['posts'],
         queryFn: getmoreinfo
+    })
+
+    const suspectQuery2 = useQuery({
+        queryKey: ['posts'],
+        queryFn: getmoreinfo2
     })
     if (suspectQuery.status === 'loading') return <div style={{ margin: 'auto', width: '10%', marginTop: '300px' }}> <ThreeCircles
     height="100"
@@ -37,7 +47,7 @@ function MoreInfo() {
     return ( 
         <>
         
-            <MoreList moreinfo={suspectQuery.data } />
+            <MoreList moreinfo={suspectQuery.data } suspectmanysurety={suspectQuery2} />
         
         </>
     )
