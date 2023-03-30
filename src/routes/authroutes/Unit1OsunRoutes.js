@@ -62,7 +62,7 @@ function Unit1OsunRoutes({ ...rest }) {
 
   if (errorNetwork) {
     return <div>
-      <h1 className='text-danger text-center'>ERROR WITH SERVE PLEASE CONTACT THE ADMIN OFFICERS </h1>
+      <h4 className='text-danger text-center'>ERROR WITH SERVER PLEASE CONTACT THE ADMIN OFFICERS </h4>
     </div>
   } else {
     if (loading) {

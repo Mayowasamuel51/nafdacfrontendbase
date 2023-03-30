@@ -1,7 +1,7 @@
 {
   "name": "nafdacfrontend",
   "version": "0.1.0",
-  "homepage": "https://nafdac.com",
+  "homepage": "https://codarnetwork.online/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
