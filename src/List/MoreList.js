@@ -345,7 +345,7 @@ function MoreList({ moreinfo, suspectmanysurety }) {
                                         Note by Front Desk Officer{" "}
                                     </h1>{" "}
                                     <br />
-                                    <div>{ }</div>
+                                    <div>{item.note }</div>
                                 </div>
                                 <br />
 
@@ -400,16 +400,7 @@ function MoreList({ moreinfo, suspectmanysurety }) {
                                                     )}
                                                 </tbody>
                                             </table>
-                                            <Link
-                                                className="btn btn-success "
-                                                to="/fd/dashboard"
-                                                style={{
-                                                    textDecoration: "none",
-                                                    color: "white",
-                                                }}
-                                            >
-                                                Go Back
-                                            </Link>
+                                         
                                         </div>
                                     </div>
                                 </div>

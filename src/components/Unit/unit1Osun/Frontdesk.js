@@ -15,6 +15,7 @@ import SearchList from "../../../List/SearchList";
 import CheckList from "../../../List/CheckList";
 function Frontdesk() {
   const [date, setDate] = useState(new Date());
+  const martic_number = localStorage.getItem('martic_number')
   const [showDate, setShowDate] = useState(true);
   const [police, setPolice] = useState([]);
   const [details, setDetails] = useState('')
@@ -26,7 +27,7 @@ function Frontdesk() {
   const [checkloading, setCheckLoading] = useState(false)
   const [checkData, setcheckData] = useState([])
 
-
+  const [surety , setSuerty]=useState([])
   const [dateinput, setDateInput] = useState('');
 
   // input errors
@@ -65,6 +66,8 @@ function Frontdesk() {
       console.log(err.message);
     }
   });
+
+ 
 
 
 
@@ -138,6 +141,9 @@ function Frontdesk() {
 
   useEffect(() => {
     fetchPost();
+  }, []);
+  useEffect(() => {
+    // fetchPostS();
   }, []);
   let serachContent = '';
   let checkseacrch = ''

@@ -99,7 +99,12 @@ const route = [
         component: Admin
     },
 
-
+    {
+        path: '/unit1Osun/admin/moreinfo/:id/',
+        exact: true,
+        name: 'MoreInfo',
+        component: MoreInfo
+    },
     // { path: '/unit1Osun/admin/dashboard', exact: true, name: 'dashboard', component: Dashboard },
     // { path: '/unit1Osun/admin/moreinfo/:id/:martic_number', exact: true, name: 'Moreinfo', component: MoreInfo },
     { path: '/unit1Osun/admin/note/:id/', exact: true, name: 'AdminNote', component: AdminNote },
@@ -108,16 +113,16 @@ const route = [
         exact: true, name: 'OfficersForSuspect',
         component: OfficersForSuspect
     },
-    {
-        path: '/unit1Osun/admin/moreinfo/:martic_number/',
-        exact: true,
-        name: 'MoreInfo',
-        component: MoreInfo
-    },
+    // {
+    //     path: '/unit1Osun/admin/moreinfo/:martic_number/',
+    //     exact: true,
+    //     name: 'MoreInfo',
+    //     component: MoreInfo
+    // },
     {
         
         path: '/unit1Osun/admin/edit-suspect/:martic_number/',
-        exact: true,
+        exact: true, 
         name: 'AdminChild',
         component: AdminChild
     },

@@ -44,9 +44,9 @@ function SuspectList({ suspect, police }) {
 
                                                     }
 
-                                                    {item.firstname    === 'Troy Pennington' ? <div className="tn btn-primary position-relative">
+                                                    {item.firstname === 'Troy Pennington' ? <div className="tn btn-primary position-relative">
                                                         <span style={{ zIndex: '99', height: '20px', width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} className=" position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                                                            <span className="p-2 text-white">0</span>
+                                                            <span className="p-2 text-white">1</span>
                                                         </span>
                                                     </div> : ''
 
@@ -95,7 +95,7 @@ function SuspectList({ suspect, police }) {
                                                 </td>
                                                 <td>
                                                     <Link onClick={(e) => (localStorage.setItem('martic_number', item.martic_number))}
-                                                        to={`moreinfo/${item.martic_number}`}
+                                                        to={`moreinfo/${item.id}`}
                                                         className="btn btn-dark btn-sm px-3 py-1 rounded-0"
                                                     >
                                                         More info

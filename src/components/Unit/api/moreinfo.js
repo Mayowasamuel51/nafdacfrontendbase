@@ -12,7 +12,7 @@ export  function getmoreinfo(){
 
 
 export  function getmoreinfo2(){
-    const unitId = localStorage.getItem('unitId')
+    const unitId = localStorage.getItem('martic_number')
     return axios
-    .get(`/api/moreinfo/surety/${unitId}`).then(res=>res.data.data)
+    .get(`/api/moreinfo/surety//${unitId}`).then(res=>res.data.surety)
 }
