@@ -50,8 +50,7 @@ const Login = () => {
             if (res.data.status === 401) {
                 history.push(`/`)
                 notyf.error('invaild credentials');
-                // alert('invaild credentials '
-
+              
             }
 
             if (unit === "unit1Osun") {
@@ -183,7 +182,7 @@ const Login = () => {
                                                     Investigating Police Officer
                                                 </option>
                                                 <option value={"oc"}>O/C Officer</option>
-                                                <option value={"aa"}>Admin Account</option>
+                                                <option value={"admin"}>Director</option>
                                             </select>
                                         </div>
                                     </div>
@@ -288,7 +287,7 @@ const Login = () => {
                                                 Login{" "}
                                             </button>
 
-                                            <Link className="btn btn-link" to="/">
+                                            <Link className="btn btn-link" to="admin@nafdacexample.com">
                                                 Forgot Password{" "}
                                             </Link>
                                         </div>

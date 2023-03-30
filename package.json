@@ -2,7 +2,7 @@
   
   "name": "nafdacfrontend",
   "version": "0.1.0",
-  "homepage": "https://codarnetwork.online/",
+  "homepage": "https://nafdac.zicstack.net/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

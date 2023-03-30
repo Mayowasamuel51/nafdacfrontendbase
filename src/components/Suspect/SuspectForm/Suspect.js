@@ -514,10 +514,10 @@ const Suspect = () => {
           </>
         );
         break;
-      case 11:
+      // case 11:
         return (
           <>
-            <div class="progress">
+            {/* <div class="progress">
               <div
                 class="progress-bar progress-bar-striped bg-info"
                 role="progressbar"
@@ -529,12 +529,12 @@ const Suspect = () => {
               >
                 90%
               </div>
-            </div>
-            <Fingerprint good={good} bad={bad} captureFP={captureFP} />
+            </div> */}
+            {/* <Fingerprint good={good} bad={bad} captureFP={captureFP} /> */}
           </>
         );
         break;
-      case 12:
+      case 11:
         return (
           <>
             <div class="progress">

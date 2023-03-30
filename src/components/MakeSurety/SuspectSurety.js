@@ -406,11 +406,11 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
                 <br />
                 <div className="text-center fs-5 ">
                     {/* < HiArrowSmDown className="fs-1 text-center text-primary" /> <br></br> */}
-                    <button className="btn btn-dark"> <Link
+                    {/* <button className="btn btn-dark"> <Link
                         // to={`suspect-many-surety/${martic_number}`}
                         to={`/fd/edit-suspect-surety/${suspect_id}/suspect-many-surety/${martic_number}`}
                         style={{ textDecoration: 'none', color: 'white' }} >Check all Surety Standing For
-                        <span className="ps-2 fw-bold h2">{suspect_name}</span></Link></button>
+                        <span className="ps-2 fw-bold h2">{suspect_name}</span></Link></button> */}
                 </div>
                 {/* Personal info */}
                 <div className="m-5" style={{ boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 100px 0px' }} data-aos="fade-right" data-aos-delay="90" data-aos-easing="ease-in-out"   >

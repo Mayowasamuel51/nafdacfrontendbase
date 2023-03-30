@@ -10,6 +10,10 @@ import OCofficer from '../components/OfficerComponents/OCofficer';
 import Note from '../components/MakeSurety/Note';
 import SuspectEdit from '../components/Unit/unit1Osun/SuspectEdit';
 import MoreInfo from '../components/MoreInfo/MoreInfo';
+import Admin from '../components/Unit/unit1Osun/Admin';
+import OfficersForSuspect from '../components/OfficerComponents/OfficersForSuspect';
+import AdminNote from '../components/OfficerComponents/AdminNote';
+import AdminChild from '../components/Unit/unit1Osun/AdminChild';
 const route = [
     { path: '/unit1Osun', exact: true, name: 'Unit1Osun' },
     {
@@ -86,8 +90,38 @@ const route = [
         name: 'MoreInfo',
         component: MoreInfo
     }
+,
+    // admin 
+    {
+        path: '/unit1Osun/admin',
+        exact: true,
+        name: 'ADMIN',
+        component: Admin
+    },
 
 
+    // { path: '/unit1Osun/admin/dashboard', exact: true, name: 'dashboard', component: Dashboard },
+    // { path: '/unit1Osun/admin/moreinfo/:id/:martic_number', exact: true, name: 'Moreinfo', component: MoreInfo },
+    { path: '/unit1Osun/admin/note/:id/', exact: true, name: 'AdminNote', component: AdminNote },
+    {
+        path: '/unit1Osun/admin/add-suspect-officer/martic_number/',
+        exact: true, name: 'OfficersForSuspect',
+        component: OfficersForSuspect
+    },
+    {
+        path: '/unit1Osun/admin/moreinfo/:martic_number/',
+        exact: true,
+        name: 'MoreInfo',
+        component: MoreInfo
+    },
+    {
+        
+        path: '/unit1Osun/admin/edit-suspect/:martic_number/',
+        exact: true,
+        name: 'AdminChild',
+        component: AdminChild
+    },
+    // { path: '/unit1Osun/admin/edit-suspect/:martic_number', exact: true, name: 'SuspectEdit', component: SuspectEdit },
 
 
 
@@ -98,3 +132,12 @@ const route = [
 
 
 export default route;
+
+
+
+// DB_CONNECTION=mysql
+// DB_HOST=localhost
+// DB_PORT=3306
+// DB_DATABASE=codarnet_nafdac
+// DB_USERNAME=codarnet_nafdac
+// DB_PASSWORD=yi4L(k!]{ep@

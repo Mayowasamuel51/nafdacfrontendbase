@@ -16,6 +16,17 @@ const PersonalInfo = ({
   nin,
   driver
 }) => {
+  const [times, setTimes] = useState(false)
+
+
+  const handleInput = (e) => {
+    const phoneNumbers = ['08034487721', '08026087930']
+
+    if(e.target.value === phoneNumbers[1]){
+      setTimes((prev) => !prev)
+    }
+  }
+
   return (
     <div className="container">
       <div class="progress">
@@ -174,17 +185,20 @@ const PersonalInfo = ({
                   onChange={checkInput}
                 />
               </div>
+
               <div className="mb-1">
-                <p className="text-dark fs-5 mb-1">Mobile Phone:</p>
+                <p className="text-dark fs-5 mb-1">Phone Number:</p>
                 <input
                   type="number"
                   className="form-control py-3"
                   name="moblie_phone"
                   value={inputs.moblie_phone}
                   onChange={checkInput}
+                  onKeyUp={handleInput}
                   placeholder="Phone Number"
                 />
                 <span className="text-danger  fs-6">{error.mobile_phone}</span>
+                {times ? <span className="text-danger fs-6 mt-4">Previous Offender!</span> : ""}
               </div>
 
               <div className="mb-1">
@@ -314,4 +328,4 @@ const PersonalInfo = ({
   );
 };
 
-export default PersonalInfo;
+export default PersonalInfo;
