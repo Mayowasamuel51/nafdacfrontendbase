@@ -54,7 +54,7 @@ const OfficersForSuspect = () => {
     useEffect(() => {
         Call()
     }, [])
-  
+
     let martic_number = ''
     let suspect_name = ''
     name.map((item) => {
@@ -81,7 +81,7 @@ const OfficersForSuspect = () => {
             officer_signature_date: input.officer_signature_date,
             oc_name: input.oc_name,
             oc_signature_date: input.oc_signature_date,
-            martic_number:martic_number
+            martic_number: martic_number
         }
         axios.post('/api/officers', data).then((response) => {
             if (response.data.status === 200) {
@@ -97,7 +97,7 @@ const OfficersForSuspect = () => {
 
         // console.log('form is done well')
     }
-    
+
     return (
         <div className="" style={{ boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px' }}>
             {/* <Nav /> */}

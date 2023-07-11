@@ -2,7 +2,7 @@
 // click on officer 
 // perform your duty 
 import axios from "axios";
-import { useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import React from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { Redirect, Route, useParams } from "react-router-dom";
@@ -221,25 +221,27 @@ function RF() {
 
             <Navbar details={details} detailsHanlder={detailsHanlder} FindDetails={clickFind} /> <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
             <div className="text-center " style={{
-        float: 'right',
-        marginRight: '5em',
-        boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', padding: '20px'
-      }}>
+                float: 'right',
+                marginRight: '5em',
+                boxShadow: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px', padding: '20px'
+            }}>
 
-        <input className="form-control" type="date" onChange={dateHandler} value={dateinput} />
-        <button className="btn btn-info fw-bolder mt-4 " onClick={buttonCalender}>check</button>
-      </div>
-      <div className="">
-        <br />
-        {serachContent}
-        <div className="mt-4">
-          {checkseacrch}
-        </div>
-           
+                <input className="form-control" type="date" onChange={dateHandler} value={dateinput} />
+                <button className="btn btn-info fw-bolder mt-4 " onClick={buttonCalender}>check</button>
+            </div>
+            <div className="">
+                <br />
+                {serachContent}
+                <div className="mt-4">
+                    {checkseacrch}
+                </div>
+
                 <h1 className="ps-3 " style={{ lineHeight: '2.8rem' }}>Regulatory Officer</h1>
                 <h5 className="ps-3">Suspect Infomation Under  {unitId}</h5>
                 <br />
-                <PoliceList suspect={suspectQuery.data} />
+               
+                    <PoliceList suspect={suspectQuery.data} />
+      
             </div>
 
 

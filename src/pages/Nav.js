@@ -43,14 +43,14 @@ function Nav() {
             Login
           </Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             className="nav-link btn btn-success px-4 rounded-5 text-light"
             to="/register"
           >
             Register
           </Link>
-        </li>
+        </li> */}
       </>
     );
   } else {

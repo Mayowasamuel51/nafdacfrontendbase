@@ -29,7 +29,8 @@ const route = [
     },
 
     {
-        path: '/unit1Osun/edit-suspect-surety/:martic_number',
+        // path: '/unit1Osun/edit-suspect-surety/:martic_number',
+        path: '/unit1Osun/edit-suspect-surety/:id',
         exact: true, name: 'SuspectSurety',
         component: SuspectSurety
     },

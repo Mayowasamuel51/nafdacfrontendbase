@@ -137,8 +137,8 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
 
 
     })
-    const { martic_number, } = useParams()
-    const suspect_id = martic_number
+    const { id, } = useParams()
+    const suspect_id =id
     const unitId = localStorage.getItem('unitId')
     const [name, setSuspectData] = useState([])
     const Call = () => {
@@ -194,31 +194,18 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
         formData.append("affix_front", image_front);
 
         formData.append("unitId", unitId);
-        // console.log(image_tag)
-        // formData.append('affix_left', selectedFile)
-        // formData.append('affix_right', selectedFile_1)
-        // formData.append('affix_front', selectedFile_2)
-
-
         formData.append('surety_requirement', inputs.surety_requirement)
         formData.append('suspect_name', inputs.suspect_name)
         formData.append('prior_surety', inputs.prior_surety)
         formData.append('relationship', inputs.relationship)
         formData.append('email', inputs.email)
-
-
         formData.append('crime', inputs.crime)
         formData.append('penalty', inputs.penalty)
         formData.append('time_known', inputs.time_known)
         formData.append('prior_case', inputs.prior_case)
         formData.append('date_signature', inputs.date_signature)
-
         formData.append('international_passport', inputs.international_passport)
         formData.append('date_birth', inputs.date_birth)
-
-
-
-
         formData.append('office_phone', inputs.Office_phone)
         formData.append('place_birth', placebirth)
         formData.append('mobile_phone', inputs.moblie_phone)
@@ -228,16 +215,12 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
         formData.append('langugaes', lang)
         formData.append('residental_address', inputs.Res_address)
         formData.append('office_shop', inputs.Office_shop_res)
-
-
-
         formData.append('last_place', inputs.last_place)
         formData.append('address_of_penultimate	', inputs.address_of_penultimate)
         formData.append('address_employer', inputs.address_employer)
         formData.append('Penultimate_Place', inputs.Penultimate_Place)
         formData.append('nationality', inputs.nationality)
         formData.append('state', orgin)
-
         formData.append('tertiary_i', institution)
         formData.append('tertiary_y', inputs.year_of_graduation)
         formData.append('tertiary_yg', inputs.year_of_entry)
@@ -252,34 +235,27 @@ function SuspectSurety({ imageSrc, imageSrc_front, imageSrc_right }) {
         } else if (inputs.gender === "female") {
             formData.append('gender', "female")
         }
-
-        // formData.append('affix_left', selectedFile)
-        // formData.append('affix_right', selectedFile_1)
-        // formData.append('affix_front', selectedFile_2)
-
-        // console.log(selectedFile)
-
-        axios.post(`api/surety/${martic_number}`, formData, {
+        let user_martic = localStorage.getItem('martic_number')
+        axios.post(`api/mysuspectsuretys/${suspect_id}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }
         }).then((res) => {
-            if (res.data.status === 200) {
+            if (res.status === 200) {
                 console.log('done')
-                setError([])
-                
+                setError([]) 
                 localStorage.removeItem('image_front_s')
                 localStorage.removeItem('image_right_s')
                 notyf.success('SURETY ADDED ');
                 localStorage.removeItem('image_left_s')
-                if (location.pathname === `/unit1Osun/edit-suspect-surety/${martic_number}`) {
-                    navigate.push(`/unit1Osun/frontdesk`)
-                    localStorage.removeItem('martic_number')
-                }
-                if (location.pathname === `/unit2Osun/edit-suspect-surety/${martic_number}`) {
-                    navigate.push(`/unit2Osun/frontdesk`)
-                    localStorage.removeItem('martic_number')
-                }
+                // if (location.pathname === `/unit1Osun/edit-suspect-surety/${martic_number}`) {
+                //     navigate.push(`/unit1Osun/frontdesk`)
+                //     localStorage.removeItem('martic_number')
+                // }
+                // if (location.pathname === `/unit2Osun/edit-suspect-surety/${martic_number}`) {
+                //     navigate.push(`/unit2Osun/frontdesk`)
+                //     localStorage.removeItem('martic_number')
+                // }
           
             } else if (res.data.status === 422) {
                 // console.log('please fill the input fiieds')

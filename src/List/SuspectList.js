@@ -101,9 +101,17 @@ function SuspectList({ suspect, police }) {
                                                         More info
                                                     </Link>
                                                 </td>
-                                                <td>
+                                                {/* <td>
                                                     <Link onClick={(e) => (localStorage.setItem('martic_number', item.martic_number))}
                                                         to={`edit-suspect-surety/${item.martic_number}`}
+                                                        className="btn btn-dark btn-sm px-3 py-1 rounded-0"
+                                                    >
+                                                        Surety
+                                                    </Link>
+                                                </td> */}
+  <td>
+                                                    <Link onClick={(e) => (localStorage.setItem('martic_number', item.martic_number))}
+                                                        to={`edit-suspect-surety/${item.id}`}
                                                         className="btn btn-dark btn-sm px-3 py-1 rounded-0"
                                                     >
                                                         Surety

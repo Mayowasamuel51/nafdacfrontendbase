@@ -25,7 +25,7 @@ function Unit2OsunRoutes({ ...rest }) {
   }
   useEffect(() => {
     fetchAuth()
-  }, [fetchAuth])
+  }, [])
 
   axios.interceptors.response.use(
     undefined, function axiosRetryInterceptor(err) {
